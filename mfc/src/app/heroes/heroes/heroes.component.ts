@@ -1,43 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '../core';
-import * as heroService from './hero.service';
+import { Hero } from '../../core';
+import * as heroService from '../hero.service';
 
 @Component({
   selector: 'app-heroes',
-  template: `
-    <div class="content-container">
-      <app-list-header
-        title="Heroes"
-        (add)="enableAddMode()"
-        (refresh)="getHeroes()"
-      ></app-list-header>
-      <div class="columns is-multiline is-variable">
-        <div class="column is-8" *ngIf="heroes">
-          <app-hero-list
-            *ngIf="!selected"
-            [heroes]="heroes"
-            [errorMessage]="errorMessage"
-            (selected)="select($event)"
-            (deleted)="askToDelete($event)"
-          ></app-hero-list>
-          <app-hero-detail
-            *ngIf="selected"
-            [hero]="selected"
-            (unselect)="clear()"
-            (save)="save($event)"
-          ></app-hero-detail>
-        </div>
-      </div>
-
-      <app-modal
-        class="modal-hero"
-        [message]="message"
-        [isOpen]="showModal"
-        (handleNo)="closeModal()"
-        (handleYes)="deleteHero()"
-      ></app-modal>
-    </div>
-  `,
+  templateUrl: './heroes.component.html',
+  styleUrls: ['./heroes.component.scss'],
 })
 export class HeroesComponent implements OnInit {
   errorMessage: string;

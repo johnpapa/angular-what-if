@@ -1,0 +1,27 @@
+<div class="container columns">
+  <div *ngIf="movies" class="column is-8">
+    <app-list-header
+      title="My Movies"
+      (refresh)="getMovies()"
+      [showAdd]="showAdd"
+    ></app-list-header>
+    <div *ngIf="errorMessage">{{ errorMessage }}</div>
+    <div *ngIf="!movies?.length && !errorMessage">Loading data ...</div>
+    <ul class="list">
+      <li
+        role="presentation"
+        *ngFor="let movie of movies; trackBy: trackByMovie; let i = index"
+      >
+        <div class="card">
+          <div class="card-content">
+            <div class="content movie-grid">
+              <label>Name:</label><span>{{ movie.name }}</span>
+              <label>Year:</label><span>{{ movie.year }}</span>
+              <label>Length:</label><span>{{ movie.length }}</span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

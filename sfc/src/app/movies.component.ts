@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Movie } from './core';
 import * as movieService from './movie.service';
 
@@ -34,7 +34,7 @@ import * as movieService from './movie.service';
     </div>
   `,
 })
-export class MovieComponent {
+export class MovieComponent implements OnInit {
   errorMessage: string;
   showAdd = false;
   movies: Movie[];

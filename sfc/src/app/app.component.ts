@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import * as busyService from './core';
 import { delay, observeOn } from 'rxjs/operators';
 import { asapScheduler } from 'rxjs';
-import { applyHttpInterceptors } from './core';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +28,6 @@ export class AppComponent {
   busy = false;
 
   constructor() {
-    applyHttpInterceptors();
     busyService.busyState$
       // asapScheduler ensures this is async; remove this and look in console to see nasty error without this
       // ExpressionChangedAfterItHasBeenCheckedError

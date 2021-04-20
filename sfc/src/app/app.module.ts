@@ -20,6 +20,6 @@ import { HomeComponent } from './home.component';
 })
 export class AppModule {
   constructor() {
-    // applyHttpInterceptors();
+    applyHttpInterceptors();
   }
 }

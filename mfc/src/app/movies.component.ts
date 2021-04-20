@@ -1,40 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Movie } from './core';
 import * as movieService from './movie.service';
 
 @Component({
   selector: 'app-movie',
-  template: `
-    <div class="container columns">
-      <div *ngIf="movies" class="column is-8">
-        <app-list-header
-          title="My Movies"
-          (refresh)="getMovies()"
-          [showAdd]="showAdd"
-        ></app-list-header>
-        <div *ngIf="errorMessage">{{ errorMessage }}</div>
-        <div *ngIf="!movies?.length && !errorMessage">Loading data ...</div>
-        <ul class="list">
-          <li
-            role="presentation"
-            *ngFor="let movie of movies; trackBy: trackByMovie; let i = index"
-          >
-            <div class="card">
-              <div class="card-content">
-                <div class="content movie-grid">
-                  <label>Name:</label><span>{{ movie.name }}</span>
-                  <label>Year:</label><span>{{ movie.year }}</span>
-                  <label>Length:</label><span>{{ movie.length }}</span>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  `,
+  templateUrl: './movies.component.html',
+  styleUrls: ['./movies.component.scss'],
 })
-export class MovieComponent {
+export class MovieComponent implements OnInit {
   errorMessage: string;
   showAdd = false;
   movies: Movie[];

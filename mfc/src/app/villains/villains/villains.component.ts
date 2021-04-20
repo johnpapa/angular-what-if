@@ -1,43 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Villain } from '../core';
-import * as villainService from './villain.service';
+import { Villain } from '../../core';
+import * as villainService from '../villain.service';
 
 @Component({
   selector: 'app-Villains',
-  template: `
-    <div class="content-container">
-      <app-list-header
-        title="Villains"
-        (add)="enableAddMode()"
-        (refresh)="getVillains()"
-      ></app-list-header>
-      <div class="columns is-multiline is-variable">
-        <div class="column is-8" *ngIf="villains">
-          <app-villain-list
-            *ngIf="!selected"
-            [villains]="villains"
-            [errorMessage]="errorMessage"
-            (selected)="select($event)"
-            (deleted)="askToDelete($event)"
-          ></app-villain-list>
-          <app-villain-detail
-            *ngIf="selected"
-            [villain]="selected"
-            (unselect)="clear()"
-            (save)="save($event)"
-          ></app-villain-detail>
-        </div>
-      </div>
-
-      <app-modal
-        class="modal-villain"
-        [message]="message"
-        [isOpen]="showModal"
-        (handleNo)="closeModal()"
-        (handleYes)="deleteVillain()"
-      ></app-modal>
-    </div>
-  `,
+  templateUrl: './villains.component.html',
+  styleUrls: ['./villains.component.scss'],
 })
 export class VillainsComponent implements OnInit {
   errorMessage: string;
