@@ -1,0 +1,88 @@
+{
+  "users": [
+    {
+      "email": "john@contoso.com",
+      "password": "$2a$10$Hdks3dRdkXoAVkt0It9ciu9GWoqH11IbBdVS.b8MfXvmINN7NZJeC",
+      "id": 1
+    }
+  ],
+  "movies": {
+    "data": [
+      {
+        "id": 1,
+        "name": "Mary Poppins",
+        "year": "1964",
+        "length": "2h 19min"
+      },
+      {
+        "id": 2,
+        "name": "Mary Poppins Returns",
+        "year": "2018",
+        "length": "2h 10min"
+      }
+    ]
+  },
+  "heroes": {
+    "data": [
+      {
+        "id": "HeroMaryPoppins",
+        "name": "Mary Poppins",
+        "description": "practically perfect in every way",
+        "quotes": [
+          {
+            "id": 1,
+            "quote": "supercalifragilisticexpealidicious"
+          },
+          {
+            "id": 2,
+            "quote": "spit spot"
+          }
+        ]
+      },
+      {
+        "id": "HeroBert",
+        "name": "Bert",
+        "description": "Chimney sweep, sidewalk chalk artist, lamp lighter, and unsung hero"
+      },
+      {
+        "id": "HeroGeorge",
+        "name": "George W. Banks",
+        "description": "Works at Dawes Tomes Mousley Grubbs Fidelity Fiduciary Bank"
+      },
+      {
+        "id": "HeroWinnifred",
+        "name": "Winnifred Banks",
+        "description": "Active in the Women's Votes suffragette movement"
+      },
+      {
+        "id": "HeroNanna",
+        "name": "Katie Nanna",
+        "description": "Way underappreciated"
+      },
+      {
+        "id": "HeroAdmiral",
+        "name": "Admiral Boom",
+        "description": "Fires canon. We need more of him"
+      },
+      {
+        "id": "HeroUncle",
+        "name": "Uncle Albert",
+        "description": "He loves to laugh ..."
+      }
+    ]
+  },
+  "villains": {
+    "data": [
+      {
+        "id": "VillainDawesSr",
+        "name": "Mr. Dawes Sr.",
+        "description": "I once knew a main with a wooden leg named Smith"
+      },
+      {
+        "id": "VillainWilkins",
+        "name": "Mr Wilkins",
+        "description": "What's up with these bank characters?"
+      }
+    ]
+  }
+}
