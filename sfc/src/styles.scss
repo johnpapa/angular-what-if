@@ -1,0 +1,275 @@
+$vue: #42b883;
+$vue-light: #77ccaa;
+$angular: #b52e31;
+$angular-light: #eb7a7c;
+$react: #00b3e6;
+$react-light: #61dafb;
+$svelte: #ff3e00;
+$svelte-light: #f38560;
+$primary: $angular;
+$primary-light: $angular-light;
+$link: $primary; // #00b3e6; // #ff4081;
+$info: $primary;
+$shade-light: #fafafa;
+$dark-gray: #777;
+$light-gray: #bbb;
+
+@import '~bulma/bulma.sass';
+
+.content-title-group {
+  .button-group {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 170px 170px 170px;
+    @include until($tablet) {
+      grid-template-columns: 170px 170px;
+    }
+    margin-top: 20px;
+    > button.button {
+      background-color: $shade-light;
+      width: 170px;
+      border: 1px solid #eee;
+      &:hover {
+        a {
+          color: $primary;
+          text-decoration: none;
+        }
+      }
+      a {
+        color: $dark-gray;
+        &:hover {
+          color: $primary;
+        }
+        > i {
+          vertical-align: middle;
+          padding-bottom: 1px;
+          padding-right: 6px;
+        }
+      }
+    }
+  }
+}
+
+a.button.button-primary {
+  color: $dark-gray;
+  background-color: $shade-light;
+  text-decoration: none;
+  &:hover {
+    background-color: $primary-light;
+    color: #fff;
+  }
+}
+
+.column.is-2 {
+  min-width: 130px;
+  margin-right: 1em;
+}
+.menu {
+  min-width: inherit;
+  .menu-label {
+    color: $primary;
+    font-weight: bold;
+  }
+  .menu-list {
+    border-left: solid $primary-light 2px;
+    .active-link,
+    .router-link-active {
+      color: #fff;
+      background-color: $link;
+    }
+    > a {
+      text-decoration: none;
+    }
+    > a:hover {
+      background-color: $primary-light;
+      color: #fff;
+    }
+  }
+  &.auth {
+    margin-top: 3em;
+    div.auth-link {
+      cursor: pointer;
+      padding: 0.5em 0.75em;
+      &:hover {
+        background-color: $primary-light;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.user {
+  color: $primary;
+  margin-top: 2em;
+  padding-top: 1em;
+  padding-left: 0.25em;
+  border-top: 1px solid #999;
+}
+
+.movie-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 100px 200px;
+
+  label,
+  .label {
+    font-weight: bold;
+    padding-right: 8px;
+  }
+}
+
+.not-found {
+  i {
+    font-size: 20px;
+    margin-right: 8px;
+  }
+  .title {
+    letter-spacing: 0px;
+    font-weight: normal;
+    font-size: 24px;
+    text-transform: none;
+  }
+}
+
+header {
+  font-weight: bold;
+  font-family: Arial;
+  span {
+    letter-spacing: 0px;
+    &.brand-first {
+      color: #fff;
+    }
+    &.brand-second {
+      color: #ccc;
+    }
+    &.brand-third {
+      color: $primary-light;
+    }
+  }
+  .navbar-item.nav-home {
+    border: 3px solid transparent;
+    border-radius: 0%;
+    &:hover {
+      border-right: 3px solid $primary-light;
+      border-left: 3px solid $primary-light;
+    }
+  }
+  .fab {
+    font-size: 24px;
+    &.js-logo {
+      color: $primary-light;
+    }
+  }
+  .buttons {
+    i.fab {
+      color: #fff;
+      margin-left: 20px;
+      margin-right: 10px;
+      &:hover {
+        color: $primary-light;
+      }
+    }
+  }
+}
+
+.edit-detail {
+  .input[readonly] {
+    background-color: $shade-light;
+  }
+  .input::placeholder {
+    color: #ccc;
+    font-style: italic;
+  }
+}
+
+.content-title-group {
+  margin-bottom: 16px;
+  h2 {
+    border-left: 16px solid $primary;
+    border-bottom: 2px solid $primary;
+    padding-left: 8px;
+    padding-right: 16px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #555;
+    letter-spacing: 0px;
+    &:hover {
+      color: $link;
+    }
+  }
+  button.button {
+    border: 0;
+    color: $dark-gray;
+    &:hover {
+      color: $link;
+    }
+  }
+}
+ul.list {
+  box-shadow: none;
+}
+div.card-content {
+  background-color: $shade-light;
+  .name {
+    font-size: 28px;
+    color: #000;
+  }
+  .description {
+    font-size: 20px;
+    color: $dark-gray;
+  }
+  background-color: $shade-light;
+}
+.card {
+  margin-bottom: 2em;
+  &.signin {
+    width: 400px;
+  }
+}
+
+label.label {
+  font-weight: normal;
+}
+
+p.card-header-title {
+  background-color: $primary;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #fff;
+  display: block;
+  padding-left: 24px;
+}
+.card-footer button {
+  font-size: 16px;
+  i {
+    margin-right: 10px;
+  }
+  color: $dark-gray;
+  &:hover {
+    color: $link;
+  }
+}
+
+.modal-card-foot button {
+  display: inline-block;
+  width: 80px;
+}
+
+.modal-card-head,
+.modal-card-body {
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 0.75rem;
+}
+
+.navbar-burger {
+  margin-left: auto;
+}
+
+button.link {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
