@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API, parseList, Movie } from './core';
+import { API, parseList, Movie } from '../core';
 
 export async function getMovies() {
   try {

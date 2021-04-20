@@ -5,9 +5,9 @@ import { routes } from './router';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { applyHttpInterceptors, declarations } from './core';
-import { MovieComponent } from './movies.component';
+import { MovieComponent } from './movies/movies.component';
 import { SharedModule } from './shared/shared.module';
-import { HomeComponent } from './home.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, MovieComponent, declarations],
