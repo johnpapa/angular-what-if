@@ -1,11 +1,10 @@
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 
 import { prefixReq } from './http-config';
-import { Router } from '@angular/router';
 import { logMessage } from './log';
 
 import * as sessionService from '../session.service';
-import { appInjector } from '../injector';
+import { getRouter } from '../get-router';
 
 export function authInterceptor() {
   axios.interceptors.request.use((config: AxiosRequestConfig) => {
@@ -26,8 +25,7 @@ export function authInterceptor() {
     (error: AxiosError) => {
       if (error.response.status === 401) {
         const authHeader = error.config.headers['WWW-Authenticate'];
-        const injector = appInjector();
-        const router: Router = injector.get<Router>(Router);
+        const router = getRouter();
         if (/is expired/.test(authHeader)) {
           router.navigate(['signin']);
         } else {

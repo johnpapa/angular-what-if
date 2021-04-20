@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.json --open --port 4200",
+    "start": "ng serve --proxy-config proxy.conf.json --open --port 4300",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "full-stack": "concurrently \"npm run backend\" \"npm run start\"",
-    "backend": "json-server-auth --watch db.json --routes routes.json --port 4201 --delay 1000 --middlewares ./node_modules/json-server-reset"
+    "backend": "json-server-auth --watch db.json --routes routes.json --port 4301 --delay 1000 --middlewares ./node_modules/json-server-reset"
   },
   "private": true,
   "dependencies": {

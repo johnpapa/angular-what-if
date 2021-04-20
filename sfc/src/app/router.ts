@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Router, Routes } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { MovieComponent } from './movies.component';
 import { NotFoundComponent, SignInComponent } from './core';
