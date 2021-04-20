@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Router } from '@angular/router';
+import { setRouter } from './core';
 
 import { routes } from './router';
 import { AppComponent } from './app.component';
@@ -19,7 +21,8 @@ import { HomeComponent } from './home.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {
-  constructor() {
+  constructor(router: Router) {
+    setRouter(router);
     applyHttpInterceptors();
   }
 }
