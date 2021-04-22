@@ -11,14 +11,14 @@ by [John Papa](http://twitter.com/john_papa)
 1. Clone this repository
 
    ```bash
-   git clone https://github.com/johnpapa/angular-what-if.git tour
-   cd tour
+   git clone https://github.com/johnpapa/angular-what-if.git what-if
+   cd what-if
    ```
 
 1. Choose your app
 
    ```bash
-   cd sfc
+   cd sfc-app
    ```
 
 1. Install the npm packages
@@ -47,10 +47,10 @@ Here is a list of the scenarios explored in this monorepo.
 
 There are several apps in this repository.
 
-| Folder | Description                                                                                                             |
-| ------ | ----------------------------------------------------------------------------------------------------------------------- |
-| mfc    | Angular app using Multiple File Components (MFC). File extensions \*component.ts, \*.component.html, \*.component.css). |
-| sfc    | Angular app using Single File Components (SFC).                                                                         |
+| Folder  | Description                                                                                                             |
+| ------- | ----------------------------------------------------------------------------------------------------------------------- |
+| mfc-app | Angular app using Multiple File Components (MFC). File extensions \*component.ts, \*.component.html, \*.component.css). |
+| sfc-app | Angular app using Single File Components (SFC).                                                                         |
 
 ## What's in the App
 
