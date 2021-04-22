@@ -35,9 +35,9 @@ by [John Papa](http://twitter.com/john_papa)
 
 ## Scenarios
 
-Here is alist of the scenarios explored in this monorepo.
+Here is a list of the scenarios explored in this monorepo.
 
-| Secnario                      | Description                                                                                                                                                                                                                                                                                                                                                                               |
+| Scenario                      | Description                                                                                                                                                                                                                                                                                                                                                                               |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SFC                           | Angular, by default, separates files for HTML, TypeScript, and CSS into three files, and places them in a folder. The Single File Component (SFC) scenario combines them into a single file, and eliminates the need for the parent folder. This reduces the files, reduces file jumping during development, and makes it easier to see the entire context of a component in one place.   |
 | HTTP Requests                 | Angular offers HttpClient as its recommended HTTP library. Often the standard Fetch API is a great fit for apps. Where more robust logic is needed (e.g. interceptors) Axios is a stable, widely used, and powerful library. Both alternatives use promises and can work with the async/await syntax by default, vs RxJS default from HttpClient (though it can also work with Promises). |
@@ -50,7 +50,7 @@ There are several apps in this repository.
 | Folder | Description                                                                                                             |
 | ------ | ----------------------------------------------------------------------------------------------------------------------- |
 | mfc    | Angular app using Multiple File Components (MFC). File extensions \*component.ts, \*.component.html, \*.component.css). |
-| sfc    | Angular app using Sinfle File Components (SFC).                                                                         |
+| sfc    | Angular app using Single File Components (SFC).                                                                         |
 
 ## What's in the App
 
