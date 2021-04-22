@@ -145,6 +145,11 @@ header {
     &.brand-third {
       color: $primary-light;
     }
+    &.brand-special {
+      padding-left: 20px;
+      padding-right: 20px;
+      color: #fff;
+    }
   }
   .navbar-item.nav-home {
     border: 3px solid transparent;

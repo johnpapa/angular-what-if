@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
         <span class="brand-first">TOUR</span>
         <span class="brand-second">OF</span>
         <span class="brand-third">HEROES</span>
-        <span>, the movie edition</span>
+        <span class="brand-special">[ MFC ]</span>
       </a>
     </div>
   `,
