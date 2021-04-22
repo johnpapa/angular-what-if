@@ -1,6 +1,6 @@
 import { Router, Routes } from '@angular/router';
 import { HomeComponent } from './home.component';
-import { MovieComponent } from './movies.component';
+import { MovieComponent } from './movies/movies.component';
 import { NotFoundComponent, SignInComponent } from './core';
 import { AuthFailedComponent } from './core/components/auth-failed.component';
 

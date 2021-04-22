@@ -7,7 +7,7 @@ import { routes } from './router';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { applyHttpInterceptors, declarations } from './core';
-import { MovieComponent } from './movies.component';
+import { MovieComponent } from './movies/movies.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home.component';
 
