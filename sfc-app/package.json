@@ -20,7 +20,7 @@
     "@angular/platform-browser": "^13.0.3",
     "@angular/platform-browser-dynamic": "^13.0.3",
     "@angular/router": "^13.0.3",
-    "axios": "^0.21.1",
+    "axios": "^0.21.4",
     "bulma": "^0.8.0",
     "core-js": "^3.6.4",
     "font-awesome": "^4.7.0",
