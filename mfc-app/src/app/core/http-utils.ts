@@ -1,6 +1,6 @@
 import { AxiosResponse } from 'axios';
 
-export const API = 'api/';
+export const API = 'api';
 
 export const parseList = <T>(response: AxiosResponse) => {
   if (!response || !response?.status) {
